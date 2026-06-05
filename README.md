@@ -11,9 +11,10 @@ This repository contains an AWS CDK v2 Python application that deploys:
 - A basic GitHub Actions deployment workflow
 
 ## Architecture
-![alt text](image.png)
 
-I utilized Lucidchart instead of Excalidraw to draw/design the flowchart, so I use the familiar one.https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#
+![Architecture diagram](image.png)
+
+[View interactive diagram on Lucidchart](https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#)
 
 ## Flow
 
@@ -33,9 +34,6 @@ I utilized Lucidchart instead of Excalidraw to draw/design the flowchart, so I u
 ├── requirements.txt
 ├── requirements-dev.txt
 ├── README.md
-├── diagrams/
-│   ├── architecture.excalidraw
-│   └── architecture.svg
 ├── lambda/
 │   └── processor.py
 ├── sixthstreet/
@@ -59,7 +57,7 @@ I utilized Lucidchart instead of Excalidraw to draw/design the flowchart, so I u
 ```bash
 git clone https://github.com/mabayajoe/sixthstreet.git
 cd sixthstreet
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements-dev.txt
