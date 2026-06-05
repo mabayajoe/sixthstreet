@@ -48,7 +48,7 @@ This repository contains an AWS CDK v2 Python application that deploys:
 ## Prerequisites
 
 - Python 3.12 recommended
-- Node.js 20+
+- Node.js 20+ (22+ recommended)
 - AWS CDK CLI v2
 - AWS credentials with permission to deploy CloudFormation, S3, Lambda, IAM, and CloudWatch Logs resources
 
@@ -127,12 +127,14 @@ Then inspect the Lambda log group in CloudWatch Logs.
 
 The workflow in `.github/workflows/deploy.yml` supports manual deployment and deployment on pushes to `main`.
 
-Recommended production approach:
+Two repository secrets are required:
 
-1. Create an AWS IAM role trusted by GitHub OIDC.
-2. Grant that role deployment permissions scoped to this CDK stack.
-3. Add the role ARN as a GitHub repository secret named `AWS_DEPLOY_ROLE_ARN`.
-4. Trigger the workflow manually using `workflow_dispatch` or push to `main`.
+| Secret                  | Description                |
+|-------------------------|----------------------------|
+| `AWS_ACCESS_KEY_ID`     | IAM user access key ID     |
+| `AWS_SECRET_ACCESS_KEY` | IAM user secret access key |
+
+Add them under **GitHub repo → Settings → Secrets and variables → Actions**. The workflow will run tests, then deploy via `cdk deploy` on every push to `main` or manual trigger.
 
 ## Maintenance notes
 
