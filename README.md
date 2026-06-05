@@ -13,11 +13,11 @@ This repository contains an AWS CDK v2 Python application that deploys:
 ## Architecture
 ![alt text](image.png)
 
-The Excalidraw source was a good tool but I a familiair with Lucidchart, so I use the familiar one.https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#
+I utilized Lucidchart instead of Excalidraw to draw/design the flowchart, so I use the familiar one.https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#
 
 ## Flow
 
-1. A producer uploads a single-line file to `s3://<landing-bucket>/inbound/<file>`.
+1. A developer/user uploads a single-line file to `s3://<landing-bucket>/inbound/<file>`.
 2. S3 emits an `ObjectCreated` event.
 3. Lambda receives the event and reads the object from S3.
 4. Lambda validates that the file has exactly one line.
