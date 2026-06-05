@@ -13,7 +13,8 @@ This repository contains an AWS CDK v2 Python application that deploys:
 ## Architecture
 ![alt text](image.png)
 
-The Excalidraw source was a good tool but I a familiair with Lucidchart, so I use the familiar one.https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#
+The Excalidraw source was a good tool but I a familiair with Lucidchart, so I use the familiar one:
+https://lucid.app/lucidchart/10c58d99-3eba-49ce-a483-01d5d52fab5a/edit?beaconFlowId=6E3D1B6F102A599E&invitationId=inv_e020a25a-6490-4617-b91e-ec147816a36a&page=0_0#
 
 ## Flow
 
